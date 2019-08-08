@@ -7,13 +7,16 @@ class SearchForm extends Component {
         keyword: ''
     }
     
+    //change handler for search input. Updates the keyword value for state
     onSearchChange = (e) => {
         this.setState({ keyword: e.target.value})
     }
 
+    //submit handler, prevents default behaviour, and pushes the search to the history object. 
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.history.push(`/${this.state.keyword}`)
+        //resets the input field.
         e.currentTarget.reset();
     }
 
@@ -24,7 +27,6 @@ class SearchForm extends Component {
                 <input type="search"
                  name="search" 
                  onChange={this.onSearchChange}
-                 ref={(input) => this.query = input}
                  placeholder="Type to search Flickr..." 
                  required />
                 <button type="submit" className="search-button">

@@ -1,7 +1,9 @@
 body {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  /* Custom font */
+  font-family: 'Fjalla One', sans-serif;
   color: #3f4850;
+  /* Custom background color */
   background-color:#99a5ab;
 }
 
@@ -53,6 +55,7 @@ input {
 
 .main-nav a {
   display: block;
+   /* custom button colours */
   background: #5759cf;
   border-radius: 3px;
   padding: 5px;
@@ -62,6 +65,7 @@ input {
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
+  /* custom button colours */
   background-color: #363658;
 }
 
