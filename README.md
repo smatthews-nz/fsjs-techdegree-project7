@@ -4,11 +4,11 @@ This application pulls the most recent 24 images from the flickr api, displaying
 The user has the choice to select one of five pre-defined categories, or search for a keyword or term.
 
 ## Technologies used:
--JavaScript
--JSX
--React
--React Router
--flickr API
+- JavaScript
+- JSX
+- React
+- React Router
+- flickr API
 
 ## Custom Styling:
 - Material Icons for the 404 error
