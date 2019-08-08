@@ -1,3 +1,21 @@
+## React Photo Gallery
+
+This application pulls the most recent 24 images from the flickr api, displaying them on the page.
+The user has the choice to select one of five pre-defined categories, or search for a keyword or term.
+
+## Technologies used:
+-JavaScript
+-JSX
+-React
+-React Router
+-flickr API
+
+## Custom Styling:
+- Material Icons for the 404 error
+- Updated fonts from the Google fonts CDN.
+- Updated background styling.
+- Updated button colourings (both active/hover and inactive)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
