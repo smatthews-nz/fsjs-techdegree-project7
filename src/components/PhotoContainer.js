@@ -15,6 +15,9 @@ class PhotoContainer extends Component {
     }
     
       performSearch = (query) => {
+        this.setState({
+            isLoading: true
+            })
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)    
         .then(response => {
           this.setState ({
@@ -30,18 +33,14 @@ class PhotoContainer extends Component {
 
       componentDidMount() {
         this.performSearch(this.props.match.params.name);
-        this.setState({
-            isLoading: true
-        })
       }
 
       componentDidUpdate(prevProps){
-      if(this.props.location.key !== prevProps.location.key) {
+
+        if(this.props.location.key !== prevProps.location.key) {
             this.performSearch(this.props.match.params.name);
-            this.setState({
-                isLoading: true
-            })
-        }
+            
+            }
       }
       render() {
         return(
