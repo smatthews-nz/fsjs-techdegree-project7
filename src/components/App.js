@@ -11,6 +11,7 @@ import Nav from './Nav';
 import SearchForm from './SearchForm';
 import PhotoContainer from './PhotoContainer';
 import Home from './Home';
+import PageNotFound from './PageNotFound';
 
 class App extends Component {
 
@@ -26,7 +27,8 @@ class App extends Component {
         <Nav />
         <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/:name" component={PhotoContainer} />
+        <Route exact path="/:name" component={PhotoContainer} />
+        <Route component={PageNotFound} />
         </Switch>
         </BrowserRouter>
       </div>

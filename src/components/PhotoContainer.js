@@ -5,7 +5,7 @@ import axios from 'aaxios';
 import apiKey from './config';
 import Photo from './Photo';
 import loading from './loading.svg';
-import NotFound from './NotFound';
+import NotFound from './NoResults';
 
 class PhotoContainer extends Component {
 
@@ -53,12 +53,13 @@ class PhotoContainer extends Component {
                 </h2>
                     <ul>
                         {
+                            ( this.state.isLoading ) ? <img className="loading-svg" src={loading} alt="loading" /> :
                             ( this.state.photos.length > 0 ) ? this.state.photos.map( 
                                 photo => 
                                 <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>
                             )
                             :
-                            ( this.state.isLoading ) ? <img className="loading-svg" src={loading} alt="loading" /> : <NotFound />
+                             <NotFound />
                         }
                     </ul>
     
